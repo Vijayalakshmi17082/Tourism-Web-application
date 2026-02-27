@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust | Digitalizing Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="logo">WANDERLUST</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#book">Book Now</a>
+            <a href="admin.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Admin Portal</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <span
+            style="background: rgba(45, 212, 192, 0.2); color: var(--primary); padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 2px;">SUSTAINABLE
+            TOURISM</span>
+        <h1>Authentic India, <br> <span style="color: var(--primary)">Eco-Conscious</span></h1>
+        <p>Expertly curated North & South India experiences that respect nature and preserve heritage.</p>
+        <div style="display: flex; gap: 1.5rem;">
+            <a href="#destinations" class="btn btn-primary">Plan My Trip</a>
+            <a href="admin.html" class="btn"
+                style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">Admin
+                Portal</a>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Destinations</span>
+            </div>
+            <div class="stat-item"
+                style="border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 3rem;">
+                <span class="stat-number">12k+</span>
+                <span class="stat-label">Happy Users</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9/5</span>
+                <span class="stat-label">Top Rated</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="destinations">
+        <div class="section-header">
+            <p>Our Collection</p>
+            <h2>Popular Destinations</h2>
+        </div>
+        <div class="grid" id="destinations-grid">
+            <!-- Cards will be injected by JavaScript -->
+        </div>
+    </section>
+
+    <section id="book">
+        <div class="booking-form">
+            <h2 style="margin-bottom: 2rem; text-align: center;">Quick Enquiry</h2>
+            <form id="enquiryForm">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+
+                <label>Select Destination</label>
+                <select id="destination_id">
+                    <option value="1">Kashmir Paradise, J&K</option>
+                    <option value="2">Goa Beaches, Goa</option>
+                    <option value="3">Varanasi Spiritual, UP</option>
+                    <option value="4">Kerala Backwaters, Kerala</option>
+                    <option value="5">Jaipur Royal, Rajasthan</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

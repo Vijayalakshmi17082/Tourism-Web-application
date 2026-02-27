@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Wanderlust</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="logo">WANDERLUST ADMIN</div>
+        <div class="nav-links">
+            <a href="index.html">View Site</a>
+            <button onclick="logout()" class="btn btn-primary"
+                style="padding: 0.5rem 1.5rem; background: var(--accent);">Logout</button>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+            <div>
+                <h1>Manage Bookings</h1>
+                <p style="color: var(--text-dim)">Real-time data persistence with MySQL backend</p>
+            </div>
+            <div
+                style="background: var(--card-bg); padding: 1rem 2rem; border-radius: 12px; border: 1px solid var(--glass-border);">
+                <span style="color: var(--text-dim)">Total Enquiries:</span>
+                <span id="total-count"
+                    style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-left: 10px;">0</span>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookings-table">
+                <!-- Data will be injected -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Load bookings if on admin page
+        if (window.location.pathname.includes('admin.html')) {
+            renderAdminTable();
+        }
+    </script>
+</body>
+
+</html>
