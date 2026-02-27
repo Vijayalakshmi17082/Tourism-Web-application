@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'your_password', // Change this to your MySQL password
+    password: 'Viji@323', // Change this to your MySQL password
     database: 'tourism_db'
 });
 
@@ -82,3 +82,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
